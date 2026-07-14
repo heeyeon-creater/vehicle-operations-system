@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>차량운영시스템</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="auth-view" class="auth-view"></div>
+
+  <div id="app-shell" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="sidebar-brand">차량운영시스템</div>
+      <nav class="sidebar-nav">
+        <a class="nav-link" href="#/dashboard">대시보드</a>
+        <a class="nav-link" href="#/vehicles">차량 목록</a>
+        <a class="nav-link" href="#/my-reservations">나의 예약 내역</a>
+        <div class="nav-section-title nav-admin-only hidden">관리자</div>
+        <a class="nav-link nav-admin-only hidden" href="#/admin/vehicles">차량 관리</a>
+        <a class="nav-link nav-admin-only hidden" href="#/admin/reservations">예약 관리</a>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar-user">
+          <span id="current-user-name" class="topbar-user-name"></span>
+          <span id="current-user-dept" class="topbar-user-dept"></span>
+        </div>
+        <button id="logout-btn" class="btn btn-ghost btn-sm">로그아웃</button>
+      </header>
+      <main id="content" class="content"></main>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
